@@ -1,31 +1,23 @@
 import React from "react";
-import "tachyons";
-import "./newsItem.css";
 
-const NewsItem = ({ title, description, url, urlToImage }) => {
+const NewsItem = ({ author, source, title, description, url, urlToImage }) => {
   return (
-    <section class="mw7 center avenir">
-      <article class="bt bb b--black-10">
-        <div className="news-item">
-          <div className="news-item">
-            <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-              <img
-                src={urlToImage}
-                class="db"
-                className="'news-img"
-                alt={urlToImage}
-              />
-            </div>
-            <div class="w-100 w-60-ns pl3-ns">
-              <h3 class="f3 fw1 baskerville mt0 lh-title">
-                <a href={url}>{title}</a>
-              </h3>
-              <p class="f6 f5-l lh-copy">{description}</p>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
+    <div className="outline pa4 ma7 mb4 mt5 w-auto bg-white ba b--black-10 shadow-1 ">
+      <h2 className="baskerville f2 lh-copy">{source}</h2>
+      <h3>{author}</h3>
+      <img
+        src={urlToImage}
+        // class="db"
+        className="pa2 w-auto"
+        alt={urlToImage}
+      />
+      <div className="ml4">
+        <h3 className="f3 lh-copy dim">
+          <a href={url}>{title}</a>
+        </h3>
+        <p className="f4 lh-copy">{description}</p>
+      </div>
+    </div>
   );
 };
 

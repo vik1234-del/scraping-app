@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import NewsItem from "./NewsItem";
-import "tachyons";
+import NewsItem from "../NewsItem";
 
-const NewsList = () => {
+// import { useProSidebar } from "react-pro-sidebar";
+
+const National = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -12,12 +13,14 @@ const NewsList = () => {
         "https://newsapi.org/v2/top-headlines?country=ng&apiKey=7162cbcf047e4998a1af47fd339e3eab"
       );
       console.log(response);
+
+      // collapseSidebar();
       setArticles(response.data.articles);
     };
     getArticles();
   }, []);
   return (
-    <div>
+    <>
       {articles.map((article) => {
         return (
           <NewsItem
@@ -29,8 +32,8 @@ const NewsList = () => {
           />
         );
       })}
-    </div>
+    </>
   );
 };
 
-export default NewsList;
+export default National;
