@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vik1234-del/static/css/main.056015ba.css",
+    "main.js": "/vik1234-del/static/js/main.674c051f.js",
+    "index.html": "/vik1234-del/index.html",
+    "main.056015ba.css.map": "/vik1234-del/static/css/main.056015ba.css.map",
+    "main.674c051f.js.map": "/vik1234-del/static/js/main.674c051f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.056015ba.css",
+    "static/js/main.674c051f.js"
+  ]
+}
